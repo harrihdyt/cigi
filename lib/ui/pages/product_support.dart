@@ -43,9 +43,16 @@ class ProductionSupport extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  cardContent(
-                      title: 'Equipment', img: 'assets/images/equipment.png'),
-                  cardContent(title: 'Crew', img: 'assets/images/crew.png'),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> EquimentPage()));
+                    },
+                    child: cardContent(
+                        title: 'Equipment', img: 'assets/images/equipment.png'),
+                  ),
+                  GestureDetector(onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => CrewPage()));
+                  } ,child: cardContent(title: 'Crew', img: 'assets/images/crew.png')),
                 ],
               ),
             ]),

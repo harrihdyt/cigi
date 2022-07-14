@@ -23,12 +23,12 @@ class SpecialEvent extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Panjat Tebing', img: 'assets/images/panjat.png'),
-          CardWidget(title: 'Berselancar', img: 'assets/images/surf.png'),
-          CardWidget(title: 'Skateboard', img: 'assets/images/skate.png'),
-          CardWidget(title: 'Sepeda Gunung', img: 'assets/images/bike.png'),
-          CardWidget(title: 'Berkuda', img: 'assets/images/kuda.png'),
-          CardWidget(title: 'Paralayang', img: 'assets/images/layang.png'),
+          CardWidget(title: 'Pekan Raya Jakarta', img: 'assets/images/prj.png'),
+          CardWidget(title: 'Dugderan', img: 'assets/images/dugderan.png'),
+          CardWidget(title: 'Road Race', img: 'assets/images/race.png'),
+          CardWidget(title: 'Tour Fourty Twenty', img: 'assets/images/tour.png'),
+          CardWidget(title: 'Pameran Lukisan', img: 'assets/images/pameran.png'),
+          CardWidget(title: 'Festifal Budaya', img: 'assets/images/fest.png'),
         ],
       ),
     );

@@ -3,8 +3,10 @@ part of 'widget.dart';
 class CardWidget extends StatelessWidget {
   String title;
   String img;
+  int width;
+  int height;
 
-  CardWidget({Key? key, required this.title, required this.img})
+  CardWidget({Key? key, required this.title, required this.img, this.width = 185, this.height =285})
       : super(key: key);
 
   @override

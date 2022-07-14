@@ -23,12 +23,12 @@ class CreativeGoods extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Panjat Tebing', img: 'assets/images/panjat.png'),
-          CardWidget(title: 'Berselancar', img: 'assets/images/surf.png'),
-          CardWidget(title: 'Skateboard', img: 'assets/images/skate.png'),
-          CardWidget(title: 'Sepeda Gunung', img: 'assets/images/bike.png'),
-          CardWidget(title: 'Berkuda', img: 'assets/images/kuda.png'),
-          CardWidget(title: 'Paralayang', img: 'assets/images/layang.png'),
+          CardWidget(title: 'Boemboe Mandhe', img: 'assets/images/mandhe.png'),
+          CardWidget(title: 'Shojiru', img: 'assets/images/shojiru.png'),
+          CardWidget(title: 'Misscrip', img: 'assets/images/misscrip.png'),
+          CardWidget(title: 'Cireng Chips', img: 'assets/images/cireng.png'),
+          CardWidget(title: 'Soes Kriuk', img: 'assets/images/soes.png'),
+          CardWidget(title: 'Ainun Cake', img: 'assets/images/ainun.png'),
         ],
       ),
     );

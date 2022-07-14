@@ -1,4 +1,5 @@
 import 'dart:async';
+// import 'dart:html';
 
 import 'package:cigi/models/card_model.dart';
 import 'package:cigi/shared/shared.dart';
@@ -21,3 +22,6 @@ part 'food.dart';
 part 'extreme_sport.dart';
 part 'creative_goods.dart';
 part 'special_event.dart';
+part 'equipment.dart';
+part 'crew.dart';
+part 'edit_profile.dart';
