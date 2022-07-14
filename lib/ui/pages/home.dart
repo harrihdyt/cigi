@@ -15,6 +15,143 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       vsync: this,
     );
 
+    @override
+    void initState() {
+      super.initState();
+      Timer(
+          Duration(milliseconds: 10),
+          () => showModalBottomSheet(
+              constraints: BoxConstraints(
+                  maxHeight: MediaQuery.of(context).size.height / 3.5),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                top: Radius.circular(20),
+              )),
+              context: context,
+              builder: (context) => Padding(
+                    padding: const EdgeInsets.only(
+                      left: 16,
+                      right: 16,
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Text(
+                          'Masuk',
+                          style: blackTextStyle.copyWith(
+                              fontWeight: bold, fontSize: 28),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Login untuk mengakses semua menu',
+                          style: blackTextStyle,
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        InkWell(
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 58),
+                            width: double.infinity,
+                            height: 50,
+                            decoration: BoxDecoration(
+                                color: blueColor,
+                                borderRadius: BorderRadius.circular(
+                                  16,
+                                )),
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/images/facebook.png',
+                                  width: 32,
+                                ),
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Text(
+                                  'Lanjutkan dengan Facebook',
+                                  style:
+                                      whiteTextStyle.copyWith(fontWeight: bold),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )));
+    }
+
+    loginBottomSheet() {
+      return showModalBottomSheet(
+          constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height / 3.5),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+            top: Radius.circular(20),
+          )),
+          context: context,
+          builder: (context) => Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      'Masuk',
+                      style: blackTextStyle.copyWith(
+                          fontWeight: bold, fontSize: 28),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Login untuk mengakses semua menu',
+                      style: blackTextStyle,
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    InkWell(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 58),
+                        width: double.infinity,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: blueColor,
+                            borderRadius: BorderRadius.circular(
+                              16,
+                            )),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/facebook.png',
+                              width: 32,
+                            ),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            Text(
+                              'Lanjutkan dengan Facebook',
+                              style: whiteTextStyle.copyWith(fontWeight: bold),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ));
+    }
+
     int currentIndex = 0;
 
     header() {

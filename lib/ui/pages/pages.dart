@@ -7,6 +7,7 @@ import 'package:cigi/ui/widgets/widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 part 'home.dart';
 part 'main_page.dart';
@@ -25,3 +26,5 @@ part 'special_event.dart';
 part 'equipment.dart';
 part 'crew.dart';
 part 'edit_profile.dart';
+part 'read_profile.dart';
+part 'edit_password.dart';

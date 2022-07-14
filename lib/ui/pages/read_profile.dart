@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
-class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({Key? key}) : super(key: key);
+class ReadProfilePage extends StatelessWidget {
+  const ReadProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class EditProfilePage extends StatelessWidget {
           elevation: 2,
           centerTitle: true,
           title: Text(
-            'Ubah Profile',
+            'Profile',
             style: blackTextStyle.copyWith(fontWeight: bold),
           ),
           iconTheme: IconThemeData(
@@ -33,7 +33,6 @@ class EditProfilePage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            TextButton(onPressed: () {}, child: Text('Ganti Foto')),
             Container(
               padding: EdgeInsets.only(left: 16),
               width: double.infinity,
@@ -45,6 +44,7 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                readOnly: true,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
@@ -68,6 +68,7 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                readOnly: true,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
@@ -91,6 +92,7 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                readOnly: true,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
@@ -114,6 +116,7 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                readOnly: true,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
@@ -124,25 +127,6 @@ class EditProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: tropicalColor,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Center(
-                  child: Text(
-                    'Simpan',
-                    style: whiteTextStyle.copyWith(
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ),
-            )
           ],
         ),
       ),

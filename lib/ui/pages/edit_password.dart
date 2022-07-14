@@ -1,8 +1,14 @@
 part of 'pages.dart';
 
-class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({Key? key}) : super(key: key);
+class EditPasswordPage extends StatefulWidget {
+  const EditPasswordPage({Key? key}) : super(key: key);
 
+  @override
+  State<EditPasswordPage> createState() => _EditPasswordPageState();
+}
+
+class _EditPasswordPageState extends State<EditPasswordPage> {
+  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,18 +28,6 @@ class EditProfilePage extends StatelessWidget {
         padding: EdgeInsets.only(left: 16, right: 16, top: 30),
         child: Column(
           children: [
-            ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.asset(
-                  'assets/images/user.png',
-                  fit: BoxFit.cover,
-                  width: 120,
-                  height: 120,
-                )),
-            SizedBox(
-              height: 30,
-            ),
-            TextButton(onPressed: () {}, child: Text('Ganti Foto')),
             Container(
               padding: EdgeInsets.only(left: 16),
               width: double.infinity,
@@ -46,9 +40,19 @@ class EditProfilePage extends StatelessWidget {
                 cursorColor: greyColor,
                 style: blackTextStyle,
                 expands: false,
+                obscureText: _isObscure,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: 'Nama',
+                  hintText: 'Masukan password lama',
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                      icon: Icon(_isObscure
+                          ? Icons.visibility
+                          : Icons.visibility_off)),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),
@@ -68,10 +72,20 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                obscureText: _isObscure,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: 'Nomor',
+                  hintText: 'Masukan password baru',
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                      icon: Icon(_isObscure
+                          ? Icons.visibility
+                          : Icons.visibility_off)),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),
@@ -91,33 +105,20 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                obscureText: _isObscure,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: 'Email',
-                  focusedBorder: InputBorder.none,
-                  enabledBorder: InputBorder.none,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 16),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: lightGrey,
-                  borderRadius: BorderRadius.circular(
-                    12,
-                  )),
-              child: TextFormField(
-                cursorColor: greyColor,
-                style: blackTextStyle,
-                expands: false,
-                decoration: InputDecoration(
-                  filled: false,
-                  hintText: 'Kota',
+                  hintText: 'Konfirmasi password baru',
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                      icon: Icon(_isObscure
+                          ? Icons.visibility
+                          : Icons.visibility_off)),
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),
@@ -135,7 +136,7 @@ class EditProfilePage extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'Simpan',
+                    'Ubah Password',
                     style: whiteTextStyle.copyWith(
                       fontSize: 16,
                     ),
