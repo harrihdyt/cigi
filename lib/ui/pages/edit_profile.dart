@@ -5,6 +5,8 @@ class EditProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController nameController = TextEditingController();
+
     return Scaffold(
       backgroundColor: whiteColor,
       appBar: AppBar(
@@ -45,6 +47,7 @@ class EditProfilePage extends StatelessWidget {
               child: TextFormField(
                 cursorColor: greyColor,
                 style: blackTextStyle,
+                controller: nameController,
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
