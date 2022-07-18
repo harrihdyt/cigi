@@ -72,7 +72,7 @@ class ReadProfilePage extends StatelessWidget {
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: FirebaseAuth.instance.currentUser!.phoneNumber!,
+                  hintText: 'Phone Number',
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),
