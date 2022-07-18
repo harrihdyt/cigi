@@ -17,7 +17,7 @@ class VoucherLogin extends StatelessWidget {
             onTap: () {
               showModalBottomSheet(
                   constraints: BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height / 3,
+                    maxHeight: MediaQuery.of(context).size.height / 2,
                   ),
                   shape: RoundedRectangleBorder(
                       borderRadius:
@@ -120,7 +120,7 @@ class VoucherLogin extends StatelessWidget {
             onTap: () {
               showModalBottomSheet(
                   constraints: BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height / 3,
+                    maxHeight: MediaQuery.of(context).size.height / 2,
                   ),
                   shape: RoundedRectangleBorder(
                       borderRadius:
@@ -223,7 +223,7 @@ class VoucherLogin extends StatelessWidget {
             onTap: () {
               showModalBottomSheet(
                   constraints: BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height / 3,
+                    maxHeight: MediaQuery.of(context).size.height / 2,
                   ),
                   shape: RoundedRectangleBorder(
                       borderRadius:
