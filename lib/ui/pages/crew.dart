@@ -23,12 +23,30 @@ class CrewPage extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Br Creative', img: 'assets/images/br.png'),
-          CardWidget(title: 'Win Art Photography', img: 'assets/images/win.png'),
-          CardWidget(title: 'Epicologie.id', img: 'assets/images/epic.png'),
-          CardWidget(title: 'Photatos Photo', img: 'assets/images/photo.png'),
-          CardWidget(title: 'Bess Production', img: 'assets/images/bess.png'),
-          CardWidget(title: 'Prize Photography', img: 'assets/images/prize.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Br Creative',
+              img: 'assets/images/br.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Win Art Photography',
+              img: 'assets/images/win.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Epicologie.id',
+              img: 'assets/images/epic.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Photatos Photo',
+              img: 'assets/images/photo.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Bess Production',
+              img: 'assets/images/bess.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Prize Photography',
+              img: 'assets/images/prize.png'),
         ],
       ),
     );

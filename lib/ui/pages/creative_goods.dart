@@ -23,12 +23,30 @@ class CreativeGoods extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Boemboe Mandhe', img: 'assets/images/mandhe.png'),
-          CardWidget(title: 'Shojiru', img: 'assets/images/shojiru.png'),
-          CardWidget(title: 'Misscrip', img: 'assets/images/misscrip.png'),
-          CardWidget(title: 'Cireng Chips', img: 'assets/images/cireng.png'),
-          CardWidget(title: 'Soes Kriuk', img: 'assets/images/soes.png'),
-          CardWidget(title: 'Ainun Cake', img: 'assets/images/ainun.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Boemboe Mandhe',
+              img: 'assets/images/mandhe.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Shojiru',
+              img: 'assets/images/shojiru.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Misscrip',
+              img: 'assets/images/misscrip.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Cireng Chips',
+              img: 'assets/images/cireng.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Soes Kriuk',
+              img: 'assets/images/soes.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Ainun Cake',
+              img: 'assets/images/ainun.png'),
         ],
       ),
     );

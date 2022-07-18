@@ -1,23 +1,27 @@
-import 'package:cigi/ui/pages/pages.dart';
-import 'package:flutter/material.dart';
+// import 'dart:html';
 
-void main() {
+import 'package:cigi/services/services.dart';
+import 'package:cigi/ui/pages/pages.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MainPage(),
-    );
-  }
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+        create: ((context) => AuthService()),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: AuthService().handleAuthState(),
+        ),
+      );
 }

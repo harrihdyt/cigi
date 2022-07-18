@@ -23,15 +23,38 @@ class CoolSpotPage extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Curug Lawe', img: 'assets/images/lawe.png'),
           CardWidget(
-              title: 'Madakaripura', img: 'assets/images/madakaripura.png'),
-          CardWidget(title: 'Saluopa', img: 'assets/images/saluopa.png'),
-          CardWidget(title: 'Mursala', img: 'assets/images/mursala.png'),
-          CardWidget(title: 'Curug Malela', img: 'assets/images/malela.png'),
-          CardWidget(title: 'Curug Cikaso', img: 'assets/images/cikaso.png'),
-          CardWidget(title: 'Sri Gethuk', img: 'assets/images/srigethuk.png'),
-          CardWidget(title: 'Moramo', img: 'assets/images/moramo.png'),
+              // onPress: () {},
+              title: 'Curug Lawe',
+              img: 'assets/images/lawe.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Madakaripura',
+              img: 'assets/images/madakaripura.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Saluopa',
+              img: 'assets/images/saluopa.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Mursala',
+              img: 'assets/images/mursala.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Curug Malela',
+              img: 'assets/images/malela.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Curug Cikaso',
+              img: 'assets/images/cikaso.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Sri Gethuk',
+              img: 'assets/images/srigethuk.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Moramo',
+              img: 'assets/images/moramo.png'),
         ],
       ),
     );

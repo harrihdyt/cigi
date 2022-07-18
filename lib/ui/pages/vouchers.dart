@@ -1,69 +1,53 @@
 part of 'pages.dart';
 
 class Vouchers extends StatelessWidget {
-  Vouchers({Key? key}) : super(key: key);
+  const Vouchers({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget cardContent({required String title, required String img}) {
-      return Container(
-        padding: EdgeInsets.only(left: 10, bottom: 10),
-        width: 170,
-        height: 238,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            image: DecorationImage(image: AssetImage(img), fit: BoxFit.cover)),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              title,
-              style: whiteTextStyle.copyWith(
-                fontWeight: semiBold,
-              ),
-            )
-          ],
-        ),
-      );
-    }
-
-    return Container(
-        // height: MediaQuery.of(context).size.height,
-        child: SingleChildScrollView(
-      reverse: true,
-      scrollDirection: Axis.vertical,
-      child: Expanded(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  cardContent(title: 'Cafe', img: 'assets/images/cafe.png'),
-                  cardContent(
-                      title: 'Level Voucher', img: 'assets/images/level.png'),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 10,
-                  ),
-                  cardContent(
-                      title: 'Voucher', img: 'assets/images/voucher.png'),
-                ],
-              ),
-            ]),
+    return Scaffold(
+      backgroundColor: whiteColor,
+      body: GridView.count(
+        crossAxisCount: 2,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 20,
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        children: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => CafePage()));
+              print('berhasil di tekan');
+            },
+            child: CardWidget(
+                // onPress: () {},
+                title: 'Cafe',
+                img: 'assets/images/cafe.png'),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LevelVoucherPage()));
+              print('berhasil di tekan');
+            },
+            child: CardWidget(
+                // onPress: () {},
+                title: 'Level Voucher',
+                img: 'assets/images/level.png'),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => VoucherDetail()));
+              print('berhasil di tekan');
+            },
+            child: CardWidget(
+                // onPress: () {},
+                title: 'Voucher',
+                img: 'assets/images/voucher.png'),
+          ),
+        ],
       ),
-    ));
+    );
   }
 }

@@ -23,12 +23,30 @@ class ExtremeSport extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Panjat Tebing', img: 'assets/images/panjat.png'),
-          CardWidget(title: 'Berselancar', img: 'assets/images/surf.png'),
-          CardWidget(title: 'Skateboard', img: 'assets/images/skate.png'),
-          CardWidget(title: 'Sepeda Gunung', img: 'assets/images/bike.png'),
-          CardWidget(title: 'Berkuda', img: 'assets/images/kuda.png'),
-          CardWidget(title: 'Paralayang', img: 'assets/images/layang.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Panjat Tebing',
+              img: 'assets/images/panjat.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Berselancar',
+              img: 'assets/images/surf.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Skateboard',
+              img: 'assets/images/skate.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Sepeda Gunung',
+              img: 'assets/images/bike.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Berkuda',
+              img: 'assets/images/kuda.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Paralayang',
+              img: 'assets/images/layang.png'),
         ],
       ),
     );

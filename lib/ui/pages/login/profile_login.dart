@@ -1,7 +1,7 @@
-part of 'pages.dart';
+part of 'login.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class ProfileLogin extends StatelessWidget {
+  const ProfileLogin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   ClipRRect(
                       borderRadius: BorderRadius.circular(100),
-                      child: Image.network(
-                        FirebaseAuth.instance.currentUser!.photoURL!,
+                      child: Image.asset(
+                        'assets/images/avatar.png',
                         fit: BoxFit.cover,
                         width: 64,
                         height: 64,
@@ -34,7 +34,7 @@ class ProfilePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        FirebaseAuth.instance.currentUser!.displayName!,
+                        'Welcome',
                         style: blackTextStyle.copyWith(
                           fontWeight: bold,
                           fontSize: 20,
@@ -45,7 +45,7 @@ class ProfilePage extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        FirebaseAuth.instance.currentUser!.email!,
+                        'abcd123@anonim.com',
                         style: greyTextStyle.copyWith(
                           fontWeight: light,
                           fontSize: 12,
@@ -77,10 +77,10 @@ class ProfilePage extends StatelessWidget {
               ),
               InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ReadProfilePage()));
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => ReadProfilePage()));
                   },
                   child: profile()),
               SizedBox(
@@ -88,10 +88,10 @@ class ProfilePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EditPasswordPage()));
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => EditPasswordPage()));
                 },
                 child: Container(
                   width: double.infinity,
@@ -124,10 +124,10 @@ class ProfilePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => EditProfilePage()));
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => EditProfilePage()));
                 },
                 child: Container(
                   width: double.infinity,
@@ -160,9 +160,9 @@ class ProfilePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(builder: (context) => MainLogin()),
-                      (Route<dynamic> route) => false);
+                  // Navigator.of(context).pushAndRemoveUntil(
+                  //     MaterialPageRoute(builder: (context) => MainLogin()),
+                  //     (Route<dynamic> route) => false);
                 },
                 child: Container(
                   width: double.infinity,

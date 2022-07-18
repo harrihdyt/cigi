@@ -24,8 +24,8 @@ class ReadProfilePage extends StatelessWidget {
           children: [
             ClipRRect(
                 borderRadius: BorderRadius.circular(100),
-                child: Image.asset(
-                  'assets/images/user.png',
+                child: Image.network(
+                  FirebaseAuth.instance.currentUser!.photoURL!,
                   fit: BoxFit.cover,
                   width: 120,
                   height: 120,
@@ -48,7 +48,7 @@ class ReadProfilePage extends StatelessWidget {
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: 'Nama',
+                  hintText: FirebaseAuth.instance.currentUser!.displayName!,
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),
@@ -72,7 +72,7 @@ class ReadProfilePage extends StatelessWidget {
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: 'Nomor',
+                  hintText: FirebaseAuth.instance.currentUser!.phoneNumber!,
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),
@@ -96,7 +96,7 @@ class ReadProfilePage extends StatelessWidget {
                 expands: false,
                 decoration: InputDecoration(
                   filled: false,
-                  hintText: 'Email',
+                  hintText: FirebaseAuth.instance.currentUser!.email!,
                   focusedBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
                 ),

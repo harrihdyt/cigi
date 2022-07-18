@@ -23,12 +23,30 @@ class EquimentPage extends StatelessWidget {
         mainAxisSpacing: 5,
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
-          CardWidget(title: 'Galaxy Camera', img: 'assets/images/came.png'),
-          CardWidget(title: 'Star Digital', img: 'assets/images/star.png'),
-          CardWidget(title: 'Wide', img: 'assets/images/wide.png'),
-          CardWidget(title: 'One Camera Store', img: 'assets/images/one.png'),
-          CardWidget(title: 'Macronic Computer', img: 'assets/images/compt.png'),
-          CardWidget(title: 'DOSS Superstore', img: 'assets/images/super.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Galaxy Camera',
+              img: 'assets/images/came.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Star Digital',
+              img: 'assets/images/star.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Wide',
+              img: 'assets/images/wide.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'One Camera Store',
+              img: 'assets/images/one.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Macronic Computer',
+              img: 'assets/images/compt.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'DOSS Superstore',
+              img: 'assets/images/super.png'),
         ],
       ),
     );

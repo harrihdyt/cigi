@@ -1,13 +1,13 @@
-part of 'pages.dart';
+part of 'login.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomeLogin extends StatefulWidget {
+  const HomeLogin({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeLogin> createState() => _HomeLoginState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+class _HomeLoginState extends State<HomeLogin> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(
@@ -16,6 +16,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     );
     // final user = FirebaseAuth.instance.currentUser!;
     int currentIndex = 0;
+
+    // Widget gridCostum({required String title, required String img}) {
+    //   return GridView.count(
+    //     crossAxisCount: 2,
+    //     crossAxisSpacing: 10,
+    //     mainAxisSpacing: 5,
+    //     children: [
+    //       CardWidget(title: title, img: img),
+    //       CardWidget(title: title, img: img),
+    //       CardWidget(title: title, img: img),
+    //       CardWidget(title: title, img: img),
+    //       CardWidget(title: title, img: img),
+    //       CardWidget(title: title, img: img)
+    //     ],
+    //   );
+    // }
 
     Widget headerProfile() {
       return Container(
@@ -32,8 +48,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                       image: DecorationImage(
-                        image: NetworkImage(
-                            FirebaseAuth.instance.currentUser!.photoURL!),
+                        image: AssetImage('assets/images/avatar.png'),
                       )),
                 ),
               ],
@@ -42,7 +57,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               height: 20,
             ),
             Text(
-              'Hi, ' + FirebaseAuth.instance.currentUser!.displayName!,
+              'Hi, Welcome',
               style: blackTextStyle.copyWith(
                 fontWeight: bold,
                 fontSize: 20,
@@ -65,7 +80,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     return Scaffold(
       backgroundColor: whiteColor,
-      // appBar: header(),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 16,
@@ -122,28 +136,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       width: double.infinity,
                       // height: 500,
                       child: SafeArea(
-                        child: ContenIdea(),
+                        child: ContentLogin(),
                       ),
                     ),
                     Container(
                       width: double.infinity,
                       // height: 500,
                       child: SafeArea(
-                        child: ProductionSupport(),
+                        child: ProductionLogin(),
                       ),
                     ),
                     Container(
                       width: double.infinity,
                       // height: 500,
                       child: SafeArea(
-                        child: MakeitHappen(),
+                        child: MakeitLogin(),
                       ),
                     ),
                     Container(
                       width: double.infinity,
                       // height: 500,
                       child: SafeArea(
-                        child: Vouchers(),
+                        child: VoucherLogin(),
                       ),
                     ),
                   ],

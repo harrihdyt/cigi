@@ -24,12 +24,29 @@ class ColaborationPage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         children: [
           CardWidget(
-              title: 'Isyana Sarasvati', img: 'assets/images/isyana.png'),
-          CardWidget(title: 'Arief Muhammad', img: 'assets/images/arief.png'),
-          CardWidget(title: 'Deny Sumargo', img: 'assets/images/deny.png'),
-          CardWidget(title: 'Baim Wong', img: 'assets/images/baim.png'),
-          CardWidget(title: 'Randy Martin', img: 'assets/images/randy.png'),
-          CardWidget(title: 'Bastian Steel', img: 'assets/images/bastian.png'),
+              // onPress: () {},
+              title: 'Isyana Sarasvati',
+              img: 'assets/images/isyana.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Arief Muhammad',
+              img: 'assets/images/arief.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Deny Sumargo',
+              img: 'assets/images/deny.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Baim Wong',
+              img: 'assets/images/baim.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Randy Martin',
+              img: 'assets/images/randy.png'),
+          CardWidget(
+              // onPress: () {},
+              title: 'Bastian Steel',
+              img: 'assets/images/bastian.png'),
         ],
       ),
     );

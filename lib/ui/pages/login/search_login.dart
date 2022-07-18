@@ -1,7 +1,7 @@
-part of 'pages.dart';
+part of 'login.dart';
 
-class SearchPage extends StatelessWidget {
-  const SearchPage({Key? key}) : super(key: key);
+class SearchLogin extends StatelessWidget {
+  const SearchLogin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
-class SpecialEvent extends StatelessWidget {
-  const SpecialEvent({Key? key}) : super(key: key);
+class TipsPage extends StatelessWidget {
+  const TipsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class SpecialEvent extends StatelessWidget {
         centerTitle: false,
         iconTheme: IconThemeData(color: blackColor),
         title: Text(
-          'Special Event',
+          'Tips',
           style: blackTextStyle.copyWith(fontWeight: bold),
         ),
       ),
@@ -25,28 +25,28 @@ class SpecialEvent extends StatelessWidget {
         children: [
           CardWidget(
               // onPress: () {},
-              title: 'Pekan Raya Jakarta',
-              img: 'assets/images/prj.png'),
+              title: 'Galaxy Camera',
+              img: 'assets/images/came.png'),
           CardWidget(
               // onPress: () {},
-              title: 'Dugderan',
-              img: 'assets/images/dugderan.png'),
+              title: 'Star Digital',
+              img: 'assets/images/star.png'),
           CardWidget(
               // onPress: () {},
-              title: 'Road Race',
-              img: 'assets/images/race.png'),
+              title: 'Wide',
+              img: 'assets/images/wide.png'),
           CardWidget(
               // onPress: () {},
-              title: 'Tour Fourty Twenty',
-              img: 'assets/images/tour.png'),
+              title: 'One Camera Store',
+              img: 'assets/images/one.png'),
           CardWidget(
               // onPress: () {},
-              title: 'Pameran Lukisan',
-              img: 'assets/images/pameran.png'),
+              title: 'Macronic Computer',
+              img: 'assets/images/compt.png'),
           CardWidget(
               // onPress: () {},
-              title: 'Festifal Budaya',
-              img: 'assets/images/fest.png'),
+              title: 'DOSS Superstore',
+              img: 'assets/images/super.png'),
         ],
       ),
     );

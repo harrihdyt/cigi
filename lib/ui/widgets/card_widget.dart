@@ -5,8 +5,15 @@ class CardWidget extends StatelessWidget {
   String img;
   int width;
   int height;
+  // Function onPress;
 
-  CardWidget({Key? key, required this.title, required this.img, this.width = 185, this.height =285})
+  CardWidget(
+      {Key? key,
+      required this.title,
+      required this.img,
+      // required this.onPress,
+      this.width = 185,
+      this.height = 285})
       : super(key: key);
 
   @override
@@ -22,10 +29,13 @@ class CardWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text(
-            title,
-            style: whiteTextStyle.copyWith(fontWeight: semiBold),
-          )
+          Expanded(
+            child: Text(
+              title,
+              maxLines: 2,
+              style: whiteTextStyle.copyWith(fontWeight: semiBold),
+            ),
+          ),
         ],
       ),
     );
