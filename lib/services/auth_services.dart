@@ -2,11 +2,11 @@ part of 'services.dart';
 
 class AuthService extends ChangeNotifier {
   // FirebaseAuth _auth = FirebaseAuth.instance.currentUser;
+  final GoogleSignIn googleSignIn = GoogleSignIn();
 
 // ! Signin with google
-  signInWithGoogle() async {
-    final GoogleSignInAccount? googleUser =
-        await GoogleSignIn(scopes: <String>[]).signIn();
+  Future signInWithGoogle() async {
+    final googleUser = await googleSignIn.signIn();
 
     final GoogleSignInAuthentication googleAuth =
         await googleUser!.authentication;
@@ -29,14 +29,15 @@ class AuthService extends ChangeNotifier {
         if (snapshot.hasData) {
           return MainPage();
         } else {
-          return Testing();
+          return MainLogin();
         }
       },
     );
   }
 
   // !signout
-  signOut() {
+  Future signOut() async {
+    await googleSignIn.disconnect();
     FirebaseAuth.instance.signOut();
   }
 }

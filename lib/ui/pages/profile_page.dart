@@ -160,9 +160,7 @@ class ProfilePage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(builder: (context) => MainLogin()),
-                      (Route<dynamic> route) => false);
+                  AuthService().signOut();
                 },
                 child: Container(
                   width: double.infinity,

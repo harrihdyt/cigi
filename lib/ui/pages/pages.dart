@@ -2,6 +2,7 @@ import 'dart:async';
 // import 'dart:html';
 
 import 'package:cigi/models/card_model.dart';
+import 'package:cigi/models/model.dart';
 import 'package:cigi/services/services.dart';
 import 'package:cigi/shared/shared.dart';
 import 'package:cigi/ui/pages/login/login.dart';
@@ -14,6 +15,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'home.dart';
 part 'main_page.dart';
@@ -42,3 +45,4 @@ part 'contact.dart';
 part 'cafe.dart';
 part 'level.dart';
 part 'voucher_detail.dart';
+part 'onboard.dart';

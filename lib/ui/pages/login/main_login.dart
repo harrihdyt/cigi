@@ -63,7 +63,7 @@ class _MainLoginState extends State<MainLogin> {
       );
     }
 
-    Widget? body() {
+    body() {
       switch (currentIndex) {
         case 0:
           return HomeLogin();
@@ -72,7 +72,7 @@ class _MainLoginState extends State<MainLogin> {
           return SearchPage();
           break;
         case 2:
-          return ProfilePage();
+          return ProfileLogin();
           break;
         default:
           return HomePage();
@@ -85,7 +85,24 @@ class _MainLoginState extends State<MainLogin> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar: customButtomNav(),
-      body: body(),
+      body: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: ((context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (snapshot.hasData) {
+            return MainPage();
+          } else if (snapshot.hasError) {
+            return Center(
+              child: Text('Something went wrong'),
+            );
+          } else {
+            return body();
+          }
+        }),
+      ),
     );
   }
 }

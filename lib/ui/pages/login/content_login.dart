@@ -217,6 +217,7 @@ class ContentLogin extends StatelessWidget {
                                       context,
                                       listen: false);
                                   provider.signInWithGoogle();
+                                  Navigator.pop(context);
                                 },
                                 style: ElevatedButton.styleFrom(
                                     primary: whiteColor,
@@ -313,23 +314,20 @@ class ContentLogin extends StatelessWidget {
                             SizedBox(
                               height: 30,
                             ),
-                            InkWell(
-                              onTap: () {
-                                AuthService().signInWithGoogle();
-                              },
-                              child: Container(
-                                width: double.infinity,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    color: whiteColor,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: greyColor.withOpacity(0.1),
-                                          spreadRadius: 8,
-                                          blurRadius: 4,
-                                          offset: Offset(0, 1))
-                                    ]),
+                            ElevatedButton(
+                                onPressed: () {
+                                  final provider = Provider.of<AuthService>(
+                                      context,
+                                      listen: false);
+                                  provider.signInWithGoogle();
+                                  Navigator.pop(context);
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: whiteColor,
+                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -343,12 +341,11 @@ class ContentLogin extends StatelessWidget {
                                     Text(
                                       'Lanjutkan dengan google',
                                       style: blackTextStyle.copyWith(
-                                          fontWeight: bold),
+                                        fontWeight: bold,
+                                      ),
                                     )
                                   ],
-                                ),
-                              ),
-                            )
+                                ))
                           ],
                         ),
                       )));
@@ -420,23 +417,20 @@ class ContentLogin extends StatelessWidget {
                             SizedBox(
                               height: 30,
                             ),
-                            InkWell(
-                              onTap: () {
-                                AuthService().signInWithGoogle();
-                              },
-                              child: Container(
-                                width: double.infinity,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    color: whiteColor,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: greyColor.withOpacity(0.1),
-                                          spreadRadius: 8,
-                                          blurRadius: 4,
-                                          offset: Offset(0, 1))
-                                    ]),
+                            ElevatedButton(
+                                onPressed: () {
+                                  final provider = Provider.of<AuthService>(
+                                      context,
+                                      listen: false);
+                                  provider.signInWithGoogle();
+                                  Navigator.pop(context);
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: whiteColor,
+                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -450,12 +444,11 @@ class ContentLogin extends StatelessWidget {
                                     Text(
                                       'Lanjutkan dengan google',
                                       style: blackTextStyle.copyWith(
-                                          fontWeight: bold),
+                                        fontWeight: bold,
+                                      ),
                                     )
                                   ],
-                                ),
-                              ),
-                            )
+                                ))
                           ],
                         ),
                       )));
@@ -527,23 +520,20 @@ class ContentLogin extends StatelessWidget {
                             SizedBox(
                               height: 30,
                             ),
-                            InkWell(
-                              onTap: () {
-                                AuthService().signInWithGoogle();
-                              },
-                              child: Container(
-                                width: double.infinity,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    color: whiteColor,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: greyColor.withOpacity(0.1),
-                                          spreadRadius: 8,
-                                          blurRadius: 4,
-                                          offset: Offset(0, 1))
-                                    ]),
+                            ElevatedButton(
+                                onPressed: () {
+                                  final provider = Provider.of<AuthService>(
+                                      context,
+                                      listen: false);
+                                  provider.signInWithGoogle();
+                                  Navigator.pop(context);
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: whiteColor,
+                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -557,12 +547,11 @@ class ContentLogin extends StatelessWidget {
                                     Text(
                                       'Lanjutkan dengan google',
                                       style: blackTextStyle.copyWith(
-                                          fontWeight: bold),
+                                        fontWeight: bold,
+                                      ),
                                     )
                                   ],
-                                ),
-                              ),
-                            )
+                                ))
                           ],
                         ),
                       )));
@@ -634,23 +623,20 @@ class ContentLogin extends StatelessWidget {
                             SizedBox(
                               height: 30,
                             ),
-                            InkWell(
-                              onTap: () {
-                                AuthService().signInWithGoogle();
-                              },
-                              child: Container(
-                                width: double.infinity,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    color: whiteColor,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: greyColor.withOpacity(0.1),
-                                          spreadRadius: 8,
-                                          blurRadius: 4,
-                                          offset: Offset(0, 1))
-                                    ]),
+                            ElevatedButton(
+                                onPressed: () {
+                                  final provider = Provider.of<AuthService>(
+                                      context,
+                                      listen: false);
+                                  provider.signInWithGoogle();
+                                  Navigator.pop(context);
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: whiteColor,
+                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -664,12 +650,11 @@ class ContentLogin extends StatelessWidget {
                                     Text(
                                       'Lanjutkan dengan google',
                                       style: blackTextStyle.copyWith(
-                                          fontWeight: bold),
+                                        fontWeight: bold,
+                                      ),
                                     )
                                   ],
-                                ),
-                              ),
-                            )
+                                ))
                           ],
                         ),
                       )));
